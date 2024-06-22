@@ -26,7 +26,7 @@ async function fetchData(urlApi) {
                     <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full">
                 </div>
                 <div class="mt-4 flex justify-between">
-                    <h3 class="text-sm text-gray-700">
+                    <h3 class="text-sm text-[#102C57">
                         <span aria-hidden="true" class="absolute inset-0"></span>
                         ${video.snippet.title}
                     </h3>
@@ -40,10 +40,18 @@ async function fetchData(urlApi) {
     }
 })();
 
-/*try {
-	const response = await fetch(API, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}*/
+/*
+Usamos este recurso para consumir la API de youtube: https://rapidapi.com/hub
+*/
+
+/*
+    1. Creamos un repositorio en github y lo clonamos.
+    2. En nuestra terminal ubicados en el proyecto usamos el comando npm init -y.
+    3. Para desplegar nuestro proyecto nos dirigimos al apartado de configuracion en nuestro repositorio del proyecto, enseguida nos dirigimos a pages.
+    4. En nuestra terminal ubicados en nuestro proyecto ocupamos el comando *npm install gh-pages --save-dev*.
+    5. En nuestro archivo package.json agregamos un nuevo script:
+    "nombreScript": "gh-pages -d carpetaConArchivosADesplegar" -> "deploy": "gh-pages -d src". La carpeta debe ser la que contenga nuestro index.html.
+    6. Enseguida subimos todos nuestros cambios al respositorio de github.
+    7. Despues ejecutamos el comando anteriormente creado: npm run comando -> npm run deploy.
+    8. Por último, en github pages en la parte de source indicamos que la branch será gh-pages y usaremos root.
+*/
